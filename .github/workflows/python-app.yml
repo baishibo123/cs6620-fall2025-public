@@ -55,7 +55,7 @@ jobs:
               "docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cs6620-app:latest",
               "docker stop cs6620-app || true",
               "docker rm cs6620-app || true",
-              "docker run -d --name cs6620-app --restart unless-stopped -p 80:5000 ${{ secrets.DOCKERHUB_USERNAME }}/cs6620-app:latest"
+              "docker run -d --name cs6620-app --restart unless-stopped -p 80:3000 baishibo123/cs6620-app:latest"
             ]' \
             --output text
 
