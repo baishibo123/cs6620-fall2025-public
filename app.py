@@ -139,12 +139,7 @@ def serve_audio_segment():
         app.logger.error(f"Error extracting audio segment: {e}")
         return f"Error extracting audio segment: {str(e)}", 500
 
-@app.route('/')
-def index():
-    """
-    Renders the main HTML page for the client-side audio player.
-    """
-    return render_template('index.html') 
+
 
 @app.route('/select_directory', methods=['POST'])
 def select_directory():
